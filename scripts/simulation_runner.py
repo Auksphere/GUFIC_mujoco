@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from gufic_env.env_gufic_velocity_field import RobotEnv as GUFICEnv
 from gufic_env.env_gic_trajectory_tracking import RobotEnv as GICEnv
 
@@ -8,7 +12,7 @@ def main(control_method = 'gufic', task = 'circle', show_viewer = False):
     robot_name = 'indy7' 
     randomized_start = False
     inertia_shaping = False
-    save = False
+    save = True
 
     assert control_method in ['gufic', 'gic']
     assert task in ['regulation', 'circle', 'line', 'sphere']
@@ -71,11 +75,11 @@ def main(control_method = 'gufic', task = 'circle', show_viewer = False):
         print(f"Data saved to {file_name}")
 
 if __name__ == '__main__':
-    show_viewer = False
+    show_viewer = True
     control_methods = ['gufic', 'gic']
-    tasks = ['regulation', 'circle', 'line', 'sphere']
+    # tasks = ['regulation', 'circle', 'line', 'sphere']
 
-    # tasks = ['sphere']
+    tasks = ['sphere']
 
     for control_method in control_methods:
         for task in tasks:

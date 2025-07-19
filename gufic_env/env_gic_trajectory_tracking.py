@@ -8,6 +8,10 @@ import time, csv, os, copy
 
 import pickle
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 # import matplotlib.pyplot as plt
 from gufic_env.utils.robot_state import RobotState
 from gufic_env.utils.mujoco import set_state, set_body_pose_rotm

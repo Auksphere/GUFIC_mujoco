@@ -1,0 +1,6 @@
+scipy==1.15.2
+mujoco==3.3.0
+matplotlib
+sympy
+control
+tikzplotlib # needs to be modified according to https://github.com/nschloe/tikzplotlib/pull/603/commits/2df1d5aa66f853c8187d61289ff3fc10846aed93

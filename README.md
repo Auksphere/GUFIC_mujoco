@@ -14,6 +14,16 @@ python == 3.10.16, scipy == 1.15.2, mujoco == 3.3.0
 ```
 
 ## Usage
+
+Setup(Modification by Auksphere)
+
+```bash
+cd GUFIC_mujoco/gufic_env
+pip install -e .
+cd ..
+pip install -r requirements.txt
+```
+
 ### Directly running the environment files:
 GUFIC
 ```source
@@ -34,7 +44,7 @@ python scripts/data_exporter_tikz.py
 ```
 
 **NOTE**
-For the ``data_exporter_tikz.py``, use ``export_tikz = False`` as the default tikz exporter is not working. Tikz exporter is not compatible with the current matplotlib version, so it needs to be updated. Go to the source ``tikzplotlib`` github and search for the issues. You may need to modify the source code, or download the modified branch and install from the source. 
+For the ``data_exporter_tikz.py``, use ``export_tikz = False`` as the default tikz exporter is not working. Tikz exporter is not compatible with the current matplotlib version, so it needs to be updated. Go to the source ``tikzplotlib`` github and search for the issues. You may need to modify the source code, or download the modified branch and install from the source. (see in requirements.txt)
 
 
 ### Citation:
